@@ -20,7 +20,6 @@ class Result:
     final_frames: List[Optional[int]]
 
 def simulate(pages: List[int], frame_count: int, algorithm: str) -> Result:
-    """Run a real page-replacement simulation, preserving frame slot positions."""
     if not pages or frame_count < 1 or any(p < 0 for p in pages):
         raise ValueError("Pages must be nonnegative and nonempty; frames must be positive.")
     algorithm = algorithm.upper()
