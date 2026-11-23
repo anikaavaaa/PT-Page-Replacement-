@@ -26,27 +26,21 @@ The simulator uses a single-file architecture, with all algorithms, input valida
 ## Repository Structure
 
 ```text
-Page-Replacement-Simulator/
+PT-Page-Replacement/
 │
-├── main.py                         # Main console interface and program execution
-├── fifo.py                         # First-In, First-Out (FIFO) algorithm
-├── lru.py                          # Least Recently Used (LRU) algorithm
-├── optimal.py                      # Optimal Page Replacement algorithm
-├── models.py                       # Shared data structures for simulation results
-├── README.md                       # Project overview and instructions
-├── .gitignore                      # Excludes Python cache and unnecessary files
+├── algorithms/
+│   ├── fifo.py                  # First-In, First-Out algorithm
+│   ├── lru.py                   # Least Recently Used algorithm
+│   └── optimal.py               # Optimal Page Replacement algorithm
 │
 ├── documentation/
-│   ├── User_Guide.pdf              # Program execution, inputs, and output interpretation
-│   └── Algorithm_Explanation.pdf   # Explanation of the three algorithms
+│   ├── User_Guide.pdf           # Program execution, inputs, and output interpretation
+│   └── Test_Cases.pdf           # Test cases with expected and actual results
 │
-└── testing/
-    ├── Test_Cases.pdf              # Expected and actual testing results
-    └── screenshots/
-        ├── test_case_1.png
-        ├── test_case_2.png
-        ├── test_case_3.png
-        └── test_case_4.png
+├── main.py                      # Main console interface and program execution
+├── models.py                    # Shared simulation data structures
+├── .gitignore                   # Excludes Python cache and unnecessary files
+└── README.md                    # Project overview and instructions
 ```
 
 ## Quick Start
