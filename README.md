@@ -20,7 +20,6 @@ The simulator uses a single-file architecture, with all algorithms, input valida
 - [User Guide (PDF)](documentation/User_Guide.pdf) — Instructions for executing the program, entering inputs, navigating the console menu, and interpreting simulation outputs.
 - [Algorithm Explanation (PDF)](documentation/Algorithm_Explanation.pdf) — Explanation of FIFO, LRU, and Optimal, including their page replacement mechanisms and computations.
 - [Test Cases (PDF)](testing/Test_Cases.pdf) — Test cases comparing expected and actual simulation results.
-- [Testing Screenshots](testing/screenshots/) — Screenshots of executed test cases.
 
 
 ## Repository Structure
