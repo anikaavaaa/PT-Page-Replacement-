@@ -10,10 +10,10 @@ The simulator uses a single-file architecture, with all algorithms, input valida
 ## Group 1 Members
 
 - Aurelio, Anika Ava K.
-- Garcia, Jessie Boy 
+- Garcia, Jessie Boy C. 
 - Garing, Kristene Joy
-- Barbacena, Christian Bryan
-- Dollete, Klarklevin John
+- Barbacena, Christian Bryan M.
+- Dollete, Klarklevin John G. 
 
 ## Documentation & Deliverables
 
@@ -22,21 +22,26 @@ The simulator uses a single-file architecture, with all algorithms, input valida
 - [Test Cases (PDF)](testing/Test_Cases.pdf) — Test cases comparing expected and actual simulation results.
 - [Testing Screenshots](testing/screenshots/) — Screenshots of executed test cases.
 
+
 ## Repository Structure
 
 ```text
 Page-Replacement-Simulator/
 │
-├── main.py
-├── README.md
-├── .gitignore
+├── main.py                         # Main console interface and program execution
+├── fifo.py                         # First-In, First-Out (FIFO) algorithm
+├── lru.py                          # Least Recently Used (LRU) algorithm
+├── optimal.py                      # Optimal Page Replacement algorithm
+├── models.py                       # Shared data structures for simulation results
+├── README.md                       # Project overview and instructions
+├── .gitignore                      # Excludes Python cache and unnecessary files
 │
 ├── documentation/
-│   ├── User_Guide.pdf
-│   └── Algorithm_Explanation.pdf
+│   ├── User_Guide.pdf              # Program execution, inputs, and output interpretation
+│   └── Algorithm_Explanation.pdf   # Explanation of the three algorithms
 │
 └── testing/
-    ├── Test_Cases.pdf
+    ├── Test_Cases.pdf              # Expected and actual testing results
     └── screenshots/
         ├── test_case_1.png
         ├── test_case_2.png

@@ -1,67 +1,32 @@
-"""
-PT 101 - Page Replacement Simulator
-Console-based FIFO, LRU and Optimal page replacement.
-"""
-from dataclasses import dataclass
-from typing import List, Optional
+"""PT 101 - Page Replacement Simulator (modular edition).
 
-@dataclass
-class Step:
-    page: int
-    frames: List[Optional[int]]
-    hit: bool
+Run: python main.py
+"""
+from typing import List
+from models import Result
+from fifo import fifo_page_replacement
+from lru import lru_page_replacement
+from optimal import optimal_page_replacement
 
-@dataclass
-class Result:
-    name: str
-    steps: List[Step]
-    hits: int
-    faults: int
-    final_frames: List[Optional[int]]
 
 def simulate(pages: List[int], frame_count: int, algorithm: str) -> Result:
     if not pages or frame_count < 1 or any(p < 0 for p in pages):
         raise ValueError("Pages must be nonnegative and nonempty; frames must be positive.")
-    algorithm = algorithm.upper()
-    if algorithm not in ("FIFO", "LRU", "OPTIMAL"):
+
+    algorithms = {
+        "FIFO": fifo_page_replacement,
+        "LRU": lru_page_replacement,
+        "OPTIMAL": optimal_page_replacement,
+    }
+    name = algorithm.upper()
+    if name not in algorithms:
         raise ValueError("Unknown algorithm.")
-    frames: List[Optional[int]] = [None] * frame_count
-    insertion_order = []
-    last_used = {}
-    steps = []
-    hits = faults = 0
+    return algorithms[name](pages, frame_count)
 
-    for index, page in enumerate(pages):
-        if page in frames:
-            hits += 1
-            hit = True
-        else:
-            faults += 1
-            hit = False
-            if None in frames:
-                slot = frames.index(None)
-            elif algorithm == "FIFO":
-                page_to_replace = insertion_order.pop(0)
-                slot = frames.index(page_to_replace)
-            elif algorithm == "LRU":
-                page_to_replace = min((p for p in frames if p is not None),
-                             key=lambda p: last_used[p])
-                slot = frames.index(page_to_replace)
-            else:
 
-                def next_use(p):
-                    try:
-                        return pages.index(p, index + 1)
-                    except ValueError:
-                        return float("inf")
-                page_to_replace = max((p for p in frames if p is not None), key=next_use)
-                slot = frames.index(page_to_replace)
-            frames[slot] = page
-            if algorithm == "FIFO":
-                insertion_order.append(page)
-        last_used[page] = index
-        steps.append(Step(page, frames.copy(), hit))
-    return Result(algorithm, steps, hits, faults, frames.copy())
+# ============================================================
+# 5. INPUT VALIDATION AND CONSOLE OUTPUT
+# ============================================================
 
 def parse_pages(raw: str) -> List[int]:
     tokens = raw.replace(",", " ").split()
