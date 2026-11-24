@@ -1,12 +1,9 @@
-"""PT 101 - Page Replacement Simulator (modular edition).
 
-Run: python main.py
-"""
 from typing import List
 from models import Result
-from fifo import fifo_page_replacement
-from lru import lru_page_replacement
-from optimal import optimal_page_replacement
+from algorithms.fifo import fifo_page_replacement
+from algorithms.lru import lru_page_replacement
+from algorithms.optimal import optimal_page_replacement
 
 
 def simulate(pages: List[int], frame_count: int, algorithm: str) -> Result:
@@ -23,10 +20,6 @@ def simulate(pages: List[int], frame_count: int, algorithm: str) -> Result:
         raise ValueError("Unknown algorithm.")
     return algorithms[name](pages, frame_count)
 
-
-# ============================================================
-# 5. INPUT VALIDATION AND CONSOLE OUTPUT
-# ============================================================
 
 def parse_pages(raw: str) -> List[int]:
     tokens = raw.replace(",", " ").split()
@@ -88,7 +81,6 @@ def compare(pages: List[int], frame_count: int):
     fewest = min(r.faults for r in results)
     winners = ", ".join(r.name for r in results if r.faults == fewest)
     print(f"\nFewest page faults for this reference string: {winners} ({fewest})")
-    print("Note: Optimal assumes future references are known (theoretical benchmark).")
 
 def menu():
     while True:

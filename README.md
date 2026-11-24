@@ -17,8 +17,8 @@ The simulator uses a single-file architecture, with all algorithms, input valida
 
 ## Documentation & Deliverables
 
-- [User Guide (PDF)](documentation/User_Guide.pdf) — Instructions for executing the program, entering inputs, navigating the console menu, and interpreting simulation outputs.
-- [Test Cases (PDF)](testing/Test_Cases.pdf) — Test cases comparing expected and actual simulation results.
+- [User Guide (PDF)](documents/Group1-User_Guide.pdf) — Instructions for executing the program, entering inputs, navigating the console menu, and interpreting simulation outputs.
+- [Testing Evidences (PDF)](documents/Group1-Testing_Evidences.pdf) — Test cases comparing expected and actual simulation results.
 
 
 ## Repository Structure
@@ -32,8 +32,8 @@ PT-Page-Replacement/
 │   └── optimal.py               # Optimal Page Replacement algorithm
 │
 ├── documentation/
-│   ├── User_Guide.pdf           # Program execution, inputs, and output interpretation
-│   └── Test_Cases.pdf           # Test cases with expected and actual results
+│   ├── Group1-User_Guide.pdf           # Program execution, inputs, and output interpretation
+│   └── Group1-Testing_Evidences.pdf           # Test cases with expected and actual results
 │
 ├── main.py                      # Main console interface and program execution
 ├── models.py                    # Shared simulation data structures
@@ -52,7 +52,7 @@ PT-Page-Replacement/
 ### How to Run
 
 1. Clone or download this repository.
-2. Open the `Page-Replacement-Simulator` folder in Visual Studio Code or a terminal.
+2. Open the `PT101-Group-1-Page_Replacement` folder in Visual Studio Code or a terminal.
 3. Run the following command:
 
 ```bash
@@ -248,16 +248,18 @@ For this example, Optimal produces the fewest page faults, followed by LRU and F
 
 ## Testing and Validation
 
-The simulator was tested using different page-reference strings and frame configurations to verify the correctness of all three algorithms.
+The Page Replacement Simulator was evaluated using different page-reference strings and memory frame configurations to verify the correctness of FIFO, LRU, and Optimal page replacement algorithms, including input validation and edge cases.
 
 The following test cases were evaluated:
 
-| Test Case | Description | Result |
-|---|---|---|
-| Test Case 1 | Standard page-reference string | PASS |
-| Test Case 2 | Repeated page references | PASS |
-| Test Case 3 | Single memory frame | PASS |
-| Test Case 4 | More frames than distinct pages | PASS |
+| **Test Case** | **Algorithm / Area** | **Description** | **Result** |
+| :--- | :--- | :--- | :---: |
+| Test Case 1 | FIFO | Replaces the page that entered memory first. | PASS |
+| Test Case 2 | LRU | Replaces the least recently used page. | PASS |
+| Test Case 3 | Optimal | Replaces the page whose next use is farthest in the future. | PASS |
+| Test Case 4 | All Algorithms | Handles repeated page references, a single memory frame, and more frames than distinct pages. | PASS |
+| Test Case 5 | Input Validation | Checks blank inputs, negative page IDs, non-numeric values, and invalid frame counts. | CODE CHECK |
+
 
 The expected and actual hit/fault counts matched for all tested algorithms.
 
