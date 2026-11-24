@@ -11,7 +11,7 @@ The simulator uses a single-file architecture, with all algorithms, input valida
 
 - Aurelio, Anika Ava K.
 - Garcia, Jessie Boy C. 
-- Garing, Kristene Joy
+- Garing, Kristene Joy I.
 - Barbacena, Christian Bryan M.
 - Dollete, Klarklevin John G. 
 
