@@ -258,10 +258,10 @@ The following test cases were evaluated:
 | Test Case 2 | LRU | Replaces the least recently used page. | PASS |
 | Test Case 3 | Optimal | Replaces the page whose next use is farthest in the future. | PASS |
 | Test Case 4 | All Algorithms | Handles repeated page references, a single memory frame, and more frames than distinct pages. | PASS |
-| Test Case 5 | Input Validation | Checks blank inputs, negative page IDs, non-numeric values, and invalid frame counts. | CODE CHECK |
+| Test Case 5 | Input Validation | Checks blank inputs, negative page IDs, non-numeric values, and invalid frame counts. | PASS |
 
 
 The expected and actual hit/fault counts matched for all tested algorithms.
 
-Detailed testing results are available in [Test_Cases.pdf](testing/Test_Cases.pdf).
+Detailed testing results are available in [Test_Cases.pdf](documents/Group1-Testing_Evidences.pdf).
 
