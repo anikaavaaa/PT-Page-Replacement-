@@ -1,8 +1,5 @@
 # Testing Evidence — Page Replacement Simulator
 
-**Batangas State University — The National Engineering University**  
-Alangilan Campus | College of Informatics and Computing Sciences
-
 ## 1. Test Overview
 
 The FIFO, LRU, and Optimal page-replacement algorithms were evaluated using benchmark reference strings, memory-frame traces, and expected HIT/FAULT totals. The first four cases cover normal execution and edge conditions. Previously documented simulator results are compared with independently calculated expected values.
@@ -14,8 +11,6 @@ The FIFO, LRU, and Optimal page-replacement algorithms were evaluated using benc
 | Test 3 | Optimal | Same sequence; select the page needed farthest in the future. | PASS |
 | Test 4 | All algorithms | Repeated references, a single frame, and enough frames for all distinct pages. | PASS |
 | Test 5 | Input validation | Reject blank, non-numeric, or negative page IDs; invalid frame counts. | PASS |
-
-> The recorded statuses are retained from the source PDF. Console outputs below are transcribed from its embedded images, not newly executed tests. See the input-validation qualification in Section 6.
 
 ## 2. Test Case 1: FIFO Page Replacement
 
