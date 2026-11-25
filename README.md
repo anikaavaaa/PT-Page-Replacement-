@@ -17,8 +17,8 @@ The simulator uses a single-file architecture, with all algorithms, input valida
 
 ## Documentation & Deliverables
 
-- [User Guide (PDF)](documents/Group1-User_Guide.pdf) — Instructions for executing the program, entering inputs, navigating the console menu, and interpreting simulation outputs.
-- [Testing Evidences (PDF)](documents/Group1-Testing_Evidences.pdf) — Test cases comparing expected and actual simulation results.
+- [User Guide (PDF)](documentation/Group1-User_Guide.pdf) — Instructions for executing the program, entering inputs, navigating the console menu, and interpreting simulation outputs.
+- [Testing Evidences (PDF)](documentation/Group1-Testing_Evidences.pdf) — Test cases comparing expected and actual simulation results.
 
 
 ## Repository Structure
@@ -263,5 +263,5 @@ The following test cases were evaluated:
 
 The expected and actual hit/fault counts matched for all tested algorithms.
 
-Detailed testing results are available in [Test_Cases.pdf](documents/Group1-Testing_Evidences.pdf).
+Detailed testing results are available in [Testing_Evidences.pdf](documentation/Group1-Testing_Evidences.pdf).
 
