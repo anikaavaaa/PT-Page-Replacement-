@@ -9,7 +9,7 @@ The simulator uses a single-file architecture, with all algorithms, input valida
 
 ## Group 1 Members
 
-- Aurelio, Anika 
+- Aurelio, Anika Ava K.
 - Garcia, Jessie Boy C. 
 - Garing, Kristene Joy I.
 - Barbacena, Christian Bryan M.
